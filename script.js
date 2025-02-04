@@ -5,9 +5,7 @@ function selectOption(option) {
         // Flash rainbow colors
         flashRainbowColors(function() {
             document.getElementById('question').style.display = 'none'; // Hide the question
-            document.getElementById('yes-buttton').style.display = 'none';
-            document.getElementById('no-button').style.display = 'none';
-            displayenvelope(); // Display the envelope
+            window.location.href = "yes.html"; // Redirects to another page
         });
     } else if (option === 'no') {
         // Change text on the "No" button to "Pleaseee"
@@ -54,11 +52,6 @@ function displayCatHeart() {
     catHeartImage.onload = function() {
         imageContainer.appendChild(catHeartImage);
     };
-}
-
-// Function to display the envelope
-function displayenvelope() {
-    window.location.href = "index.html.2"; // Redirects to another page
 }
 
 // Display the catHeart.gif initially
