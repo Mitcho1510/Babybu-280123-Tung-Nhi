@@ -5,11 +5,13 @@ function selectOption(option) {
         // Flash rainbow colors
         flashRainbowColors(function() {
             document.getElementById('question').style.display = 'none'; // Hide the question
-            displayCatHeart(); // Display the cat-heart.gif
+            document.getElementById('yes-buttton').style.display = 'none';
+            document.getElementById('no-button').style.display = 'none';
+            displayenvelope(); // Display the envelope
         });
     } else if (option === 'no') {
         // Change text on the "No" button to "Pleaseee"
-        document.getElementById('no-button').innerText = 'Pleaseee'; 
+        document.getElementById('no-button').innerText = 'No? But why :('; 
         // Increase font size of "Yes" button
         var yesButton = document.getElementById('yes-button');
         var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
@@ -56,22 +58,7 @@ function displayCatHeart() {
 
 // Function to display the envelope
 function displayenvelope() {
-    // Clear existing content in the image container
-    document.getElementById('image-container').innerHTML = '';
-    // Get the container where the image will be displayed
-    var imageContainer = document.getElementById('image-container');
-    // Create a new Image element for the cat-heart
-    var envelopeImage = new Image();
-    // Set the source (file path) for the cat-heart image
-    envelopeImage.src = 'index.html.2'; // Assuming the cat-heart image is named "cat-heart.gif"
-    // Set alternative text for the image (for accessibility)
-    envelopeImage.alt = 'Envelope';
-    // When the cat-heart image is fully loaded, add it to the image container
-    envelopeImage.onload = function() {
-        imageContainer.appendChild(envelopeImage);
-        // Hide the options container
-        document.getElementById('options').style.display = 'none';
-    };
+    window.location.href = "index.html.2"; // Redirects to another page
 }
 
 // Display the catHeart.gif initially
