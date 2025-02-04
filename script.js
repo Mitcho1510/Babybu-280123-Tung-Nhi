@@ -49,8 +49,8 @@ function displayCatHeart() {
     // Set alternative text for the image (for accessibility)
     catImage.alt = 'Cat Heart';
     // When the cat image is fully loaded, add it to the image container
-    catHeartImage.onload = function() {
-        imageContainer.appendChild(catHeartImage);
+    catImage.onload = function() {
+        imageContainer.appendChild(catImage);
     };
 }
 
